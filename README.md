@@ -12,7 +12,7 @@ of your cognitive maps.
 You can install the development version of cmpackage like so:
 
 ``` r
-devtools::install_github("Fesch_star/cmpackage")
+devtools::install_github("Fesch-star/cmpackage")
 ```
 ## config instruction
 R version 4.0.2
