@@ -1,0 +1,36 @@
+---
+title: "cmpackage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{cmpackage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(cmpackage)
+```
+## Introduction
+cmpackage is used to conduct analyses of cognitive mapping network data. A cognitive
+map is a network graph which displays all causal and utility relations that were derived
+from a text or displays the causal and normative beliefs of actors derive directly
+from respondents (via a survey, interview or focus groups).
+
+One of the main analysis one can do is to derive which concepts are deemed most
+important (has the highest salience) in the cognitive map.
+
+```{r}
+
+node_calc <- calc_degrees_goW(rutte_p2_edgelist, rutte_p2_nodelist)
+node_calc_Wdegree <- node_calc[with(node_calc, order("w_degree")),]
+
+node_calc_Wdegree[1:10, c(2, 12)]
+```
+```
