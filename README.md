@@ -48,5 +48,8 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(cmpackage)
 ## basic example code
+
+node_calc <- calc_degrees_goW(rutte_p2_edgelist, rutte_p2_nodelist)
+node_calc[1:10, c(2, 12)]
 ```
 
